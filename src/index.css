@@ -53,6 +53,21 @@ textarea:focus-visible,
   outline-offset: 2px;
   border-radius: 4px;
 }
+@keyframes logo {
+  0% {
+    transform: scale(.88);
+    opacity: .5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-logo{
+    animation: logo .8s ease forwards;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *,
