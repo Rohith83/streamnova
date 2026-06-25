@@ -53,20 +53,33 @@ textarea:focus-visible,
   outline-offset: 2px;
   border-radius: 4px;
 }
-@keyframes logo {
-  0% {
-    transform: scale(.88);
-    opacity: .5;
-  }
 
+@keyframes stream-loader {
+  0% {
+    transform: translateX(-120%);
+  }
   100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: translateX(220%);
   }
 }
 
-.animate-logo{
-    animation: logo .8s ease forwards;
+@keyframes loader-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-stream-loader {
+  animation: stream-loader 1.2s ease-in-out infinite;
+}
+
+.animate-loader-fade {
+  animation: loader-fade 0.5s ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
